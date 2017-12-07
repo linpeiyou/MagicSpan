@@ -130,13 +130,17 @@ public class MagicSpanBuilder {
      */
     private void handleLastOperation() {
         if(curOp == CURRENT_OP.NORMAL) {
-            ssbNormal.append(curNormal);
+            ssbNormal.append(getNonNullCS(curNormal));
             curOp = CURRENT_OP.NON;
 
         } else if(curOp == CURRENT_OP.DEF) {
-            ssbDef.append(curDef);
+            ssbDef.append(getNonNullCS(curDef));
             curOp = CURRENT_OP.NON;
         }
+    }
+
+    private CharSequence getNonNullCS(CharSequence cs) {
+        return cs == null ? "" : cs;
     }
 
     /**
