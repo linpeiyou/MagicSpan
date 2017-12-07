@@ -50,5 +50,5 @@ public CharSequence rpb(String str1, String str2) {
 }
 ```
 
-效果：
-[](/image/pic1.jpeg)
+效果：  
+<img src="/image/pic1.png" width = "360" height ="640"/>
